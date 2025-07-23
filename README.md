@@ -1,6 +1,6 @@
 # DataScienceChallengeTelecomX
 
-Telecom X - Análisis de Evasión de Clientes
+Telecom X - Análisis de Evasión de Clientes - Parte 2
 
 Objetivo: 
 
