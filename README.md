@@ -2,11 +2,19 @@
 
 Telecom X - Análisis de Evasión de Clientes - Parte 2
 
-Objetivo: 
+🎯 Misión:
 
-Has sido contratado como asistente de análisis de datos en Telecom X y formarás parte del proyecto "Churn de Clientes". La empresa enfrenta una alta tasa de cancelaciones y necesita comprender los factores que llevan a la pérdida de clientes.
+Tu nueva misión es desarrollar modelos predictivos capaces de prever qué clientes tienen mayor probabilidad de cancelar sus servicios.
+La empresa quiere anticiparse al problema de la cancelación, y te corresponde a ti construir un pipeline robusto para esta etapa inicial de modelado.
 
-Tu desafío será recopilar, procesar y analizar los datos, utilizando Python y sus principales bibliotecas para extraer información valiosa. A partir de tu análisis, el equipo de Data Science podrá avanzar en modelos predictivos y desarrollar estrategias para reducir la evasión.
+🧠 Objetivos del Desafío: 
+
+* Preparar los datos para el modelado (tratamiento, codificación, normalización).
+* Realizar análisis de correlación y selección de variables.
+* Entrenar dos o más modelos de clasificación.
+* Evaluar el rendimiento de los modelos con métricas.
+* Interpretar los resultados, incluyendo la importancia de las variables.
+* Crear una conclusión estratégica señalando los principales factores que influyen en la cancelación.
 
 ## 📌 1. Extracción.
 
