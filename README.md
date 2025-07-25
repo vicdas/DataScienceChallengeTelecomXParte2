@@ -108,5 +108,5 @@ El informe final incluye:
 - Matrices de confusión.
 - Recomendaciones estratégicas basadas en datos.
 
-> ✉️ Para más información o dudas, 📬 Contacto: Victor David Arriola - vicdarrsa@gmail.com | [LinkedIn]([https://www.linkedin.com/in/david-arriola/](https://www.linkedin.com/in/vidaarsa/))
+> ✉️ Para más información o dudas, 📬 Contacto: Victor David Arriola - vicdarrsa@gmail.com | [LinkedIn][([https://www.linkedin.com/in/david-arriola/](https://www.linkedin.com/in/vidaarsa/))](https://www.linkedin.com/in/vidaarsa/)
 .
