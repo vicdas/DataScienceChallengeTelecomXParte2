@@ -1,45 +1,111 @@
-# DataScienceChallengeTelecomX
+# 📊 DataScienceChallengeTelecomX
 
-Telecom X - Análisis de Evasión de Clientes - Parte 2
+## 🚀 Telecom X - Análisis de Evasión de Clientes (Parte 2)
 
-🎯 Misión:
+Este proyecto tiene como objetivo desarrollar modelos predictivos capaces de prever qué clientes tienen mayor probabilidad de cancelar sus servicios en **Telecom X**, y así ayudar a la empresa a anticiparse y diseñar estrategias de retención efectivas.
 
-Tu nueva misión es desarrollar modelos predictivos capaces de prever qué clientes tienen mayor probabilidad de cancelar sus servicios.
-La empresa quiere anticiparse al problema de la cancelación, y te corresponde a ti construir un pipeline robusto para esta etapa inicial de modelado.
+---
 
-🧠 Objetivos del Desafío: 
+## 🎯 Misión
 
-* Preparar los datos para el modelado (tratamiento, codificación, normalización).
-* Realizar análisis de correlación y selección de variables.
-* Entrenar dos o más modelos de clasificación.
-* Evaluar el rendimiento de los modelos con métricas.
-* Interpretar los resultados, incluyendo la importancia de las variables.
-* Crear una conclusión estratégica señalando los principales factores que influyen en la cancelación.
+Diseñar un **pipeline robusto de modelado predictivo**, desde la preparación de datos hasta la interpretación de resultados, con foco en la cancelación de servicios (*Churn*).
 
-## 📌 1. Extracción.
+---
 
-✅ Importar y manipular datos desde una API de manera eficiente.
+## 🧠 Objetivos del Desafío
 
-## 🔧 2. Transformación.
+- ✅ Preparar los datos para el modelado (tratamiento de valores nulos, codificación y normalización).
+- ✅ Realizar un análisis de correlación y seleccionar variables clave.
+- ✅ Entrenar dos modelos de clasificación: **Logistic Regression** y **Random Forest**.
+- ✅ Evaluar los modelos utilizando métricas como *accuracy*, *precision*, *recall*, *f1-score* y matriz de confusión.
+- ✅ Interpretar los resultados, identificando las variables más influyentes en la cancelación.
+- ✅ Elaborar una **conclusión estratégica** con recomendaciones accionables.
 
-✅ Aplicar los conceptos de ETL (Extracción, Transformación y Carga) en la preparación de los datos.
+---
 
-## 📊 3. Carga y Análisis.
+## 🧪 Tecnologías y librerías utilizadas
 
-✅ Crear visualizaciones estratégicas para identificar patrones y tendencias.
-✅ Realizar un Análisis Exploratorio de Datos (EDA).
+- `Python` + `Pandas` + `NumPy`  
+- `scikit-learn` (modelado, métricas, SMOTE, pipelines)
+- `Seaborn` y `Matplotlib` (visualización)
+- `Google Colab` y `Google Drive` (entorno de ejecución)
 
-## 📄 4. Informe final.
+---
 
-✅ Generar un informe con insights relevantes.
+## 🗂️ Estructura del Proyecto
 
-## 📄 5. Instrucciones para ejecutar el notebook.
+### 📌 1. Extracción
+✅ Los datos fueron importados eficientemente desde una API o Drive.
 
-Para replicar el análisis y visualizar los resultados detallados, siga las siguientes instrucciones para ejecutar el notebook `TelecomX_LATAM.ipynb`:
+### 🔧 2. Transformación
+✅ Se aplicó un pipeline de **ETL** con:
+- Conversión de variables categóricas (`OneHotEncoder`)
+- Escalamiento (`StandardScaler`)
+- Balanceo de clases (`SMOTE`)
 
-1.  **Acceder a Google Colab:** Abra su navegador web y diríjase a [https://colab.research.google.com/](https://colab.research.google.com/).
-2.  **Subir el notebook:** Haga clic en "Archivo" en la barra de menú superior y seleccione "Subir notebook". Busque y seleccione el archivo `TelecomX_LATAM.ipynb` desde su equipo.
-3.  **Conectar a Google Drive:** El notebook contiene código para acceder a los datos almacenados en Google Drive. Asegúrese de haber copiado los datos relevantes en su cuenta de Google Drive. Cuando el notebook le solicite autorización para acceder a su Drive, otórguela.
-4.  **Ejecutar las celdas de código:** Ejecute las celdas de código en secuencia, haciendo clic en el icono de "play" (▶) que aparece al pasar el cursor sobre cada celda, o utilizando los atajos de teclado (Shift + Enter para ejecutar la celda actual y pasar a la siguiente, Ctrl + Enter para ejecutar la celda actual).
-5.  **Visualizar los resultados:** A medida que se ejecutan las celdas, se mostrarán los resultados del análisis, incluyendo tablas y gráficos. Revise las salidas para comprender la facturación, las categorías más populares, las calificaciones de los clientes, los productos más y menos vendidos y los costos de envío promedio para cada tienda.
-6.  **Analizar el informe final:** Al final del notebook, encontrará un informe conciso que resume los hallazgos clave y proporciona información de cuales son los cloentes que cancelan el servicio.
+### 📊 3. Análisis Exploratorio (EDA)
+✅ Visualizaciones clave para comprender:
+- Distribución del churn
+- Correlación entre variables
+- Impacto de contratos, servicios, métodos de pago y antigüedad
+
+### 🤖 4. Modelado y Evaluación
+Se entrenaron dos modelos:
+
+| Modelo               | Accuracy | Precision | Recall | F1-score |
+|----------------------|----------|-----------|--------|----------|
+| Logistic Regression  | **0.7949**  | **0.6393**   | **0.5214** | **0.5744** |
+| Random Forest        | 0.7850   | 0.6220    | 0.4840 | 0.5444   |
+
+✅ **Logistic Regression fue el modelo más efectivo**, con mejor balance entre precisión y recall.
+
+### 📌 5. Interpretación y Variables Clave
+
+Principales variables que influyen en la cancelación:
+
+| Variable                         | Influencia | Interpretación |
+|----------------------------------|------------|----------------|
+| `account.Contract_Month-to-month` | Positiva   | Clientes con contrato mensual son más propensos a cancelar. |
+| `account.Contract_Two year`       | Negativa   | Contratos largos reducen el churn. |
+| `internet.TechSupport_Yes`       | Negativa   | Soporte técnico retiene clientes. |
+| `account.PaymentMethod_Electronic check` | Positiva | Asociado a mayor cancelación. |
+| `customer.tenure`                | Negativa   | Mayor antigüedad reduce la cancelación. |
+
+---
+
+## 🧩 Conclusión Estratégica
+
+Los hallazgos más relevantes indican que **la duración del contrato**, **la forma de pago**, y **los servicios adicionales contratados** (como soporte técnico o seguridad en línea) son factores determinantes en la retención del cliente.
+
+### 🎯 Recomendaciones:
+
+- Incentivar la migración a **contratos de largo plazo** mediante promociones.
+- Ofrecer **servicios de valor agregado** como soporte técnico o seguridad como parte de paquetes básicos.
+- Fomentar el uso de métodos de pago **automáticos o estables**.
+- Realizar campañas de fidelización para usuarios con mayor antigüedad.
+- Crear planes adaptados para perfiles vulnerables (por ejemplo, **adultos mayores**).
+
+---
+
+## ▶️ Ejecución del Notebook
+
+Para ejecutar el análisis y visualizar resultados en Google Colab:
+
+1. **Acceder a Google Colab**: [https://colab.research.google.com/](https://colab.research.google.com/)
+2. **Subir el notebook**: Menú `Archivo > Subir notebook` y seleccione `TelecomX_LATAM.ipynb`.
+3. **Conectar a Google Drive**: Autorice el acceso cuando sea solicitado para leer los datos.
+4. **Ejecutar las celdas**: Use el botón ▶️ o presione `Shift + Enter` para avanzar paso a paso.
+5. **Visualizar los resultados**: Observe gráficos, métricas y conclusiones generadas al final del análisis.
+
+---
+
+## 📈 Informe Final y Visualizaciones
+
+El informe final incluye:
+
+- Métricas detalladas de evaluación de modelos.
+- Gráficos de importancia de variables.
+- Matrices de confusión.
+- Recomendaciones estratégicas basadas en datos.
+
+> ✉️ Para más información o dudas, contacta al equipo de Data Science de Telecom X.
